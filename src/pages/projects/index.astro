@@ -1,45 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { projects, getCategories } from '../../data/projects';
 
-// ============================================
-// EDIT THIS: Your projects
-// ============================================
-const projects = [
-  {
-    slug: "openvpn-automation",
-    title: "OpenVPN Automation",
-    category: "Automation",
-    description: "Brief description of the project. What problem did it solve? What was the outcome?",
-    tags: ["Python", "Bash", "REST APIs"],
-    featured: true,
-  },
-  {
-    slug: "hivebox",
-    title: "HiveBox",
-    category: "DevOps",
-    description: "Brief description of the project. What problem did it solve? What was the outcome?",
-    tags: ["Kubernetes", "Terraform", "GitHub Actions"],
-    featured: true,
-  },
-  {
-    slug: "email-db-automation",
-    title: "Email → DB Automation",
-    category: "Automation",
-    description: "Brief description of the project. What problem did it solve? What was the outcome?",
-    tags: ["Python", "AWS Lambda", "PostgreSQL"],
-    featured: true,
-  },
-  {
-    slug: "cloud-architecture-case-study",
-    title: "Cloud Architecture Case Study",
-    category: "Architecture",
-    description: "Brief description of the project. What problem did it solve? What was the outcome?",
-    tags: ["AWS", "Multi-Cloud", "VPN"],
-    featured: false,
-  },
-];
-
-const categories = ["All", ...new Set(projects.map(p => p.category))];
+const categories = getCategories();
 ---
 
 <Layout title="Projects | Gabriel Palmar" activeNav="projects">
@@ -48,9 +11,7 @@ const categories = ["All", ...new Set(projects.map(p => p.category))];
       <div class="page-header">
         <h1 class="page-title">Projects</h1>
         <p class="page-description">
-          <!-- EDIT THIS: Your projects intro -->
-          A collection of work showcasing how I approach problems, 
-          design solutions, and deliver results.
+          A collection of work showcasing how I approach technical problems.
         </p>
       </div>
 
@@ -75,9 +36,31 @@ const categories = ["All", ...new Set(projects.map(p => p.category))];
             data-category={project.category}
           >
             <div class="project-image">
-              <!-- Placeholder for project image/screenshot -->
-              <div class="image-placeholder">
-                <span>{project.title.charAt(0)}</span>
+              <div class="image-placeholder" data-category={project.category}>
+                {project.category === "Architecture" && (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                    <line x1="10" y1="6.5" x2="14" y2="6.5"></line>
+                    <line x1="6.5" y1="10" x2="6.5" y2="14"></line>
+                    <line x1="17.5" y1="10" x2="17.5" y2="14"></line>
+                    <line x1="10" y1="17.5" x2="14" y2="17.5"></line>
+                  </svg>
+                )}
+                {project.category === "DevOps" && (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"></path>
+                  </svg>
+                )}
+                {project.category === "Automation" && (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                    <line x1="12" y1="2" x2="12" y2="22"></line>
+                  </svg>
+                )}
               </div>
               {project.featured && (
                 <span class="featured-badge">Featured</span>
@@ -211,13 +194,26 @@ const categories = ["All", ...new Set(projects.map(p => p.category))];
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-elevated) 100%);
+    position: relative;
   }
 
-  .image-placeholder span {
-    font-size: 3rem;
-    font-weight: 700;
+  .image-placeholder::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, var(--color-accent) 0%, transparent 70%);
+    opacity: 0.08;
+  }
+
+  .image-placeholder svg {
     color: var(--color-accent);
-    opacity: 0.3;
+    opacity: 0.4;
+    transition: all 0.3s ease;
+  }
+
+  .project-card:hover .image-placeholder svg {
+    opacity: 0.7;
+    transform: scale(1.1);
   }
 
   .featured-badge {

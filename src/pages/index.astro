@@ -1,29 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getFeaturedProjects } from '../data/projects';
 
-// ============================================
-// EDIT THIS: Your selected projects for homepage
-// ============================================
-const selectedProjects = [
-  {
-    slug: "openvpn-automation",
-    title: "Project Title Here",
-    description: "One sentence describing what this project does and what problem it solves.",
-    tags: ["Tag1", "Tag2", "Tag3"],
-  },
-  {
-    slug: "hivebox",
-    title: "Project Title Here",
-    description: "One sentence describing what this project does and what problem it solves.",
-    tags: ["Tag1", "Tag2", "Tag3"],
-  },
-  {
-    slug: "email-db-automation",
-    title: "Project Title Here",
-    description: "One sentence describing what this project does and what problem it solves.",
-    tags: ["Tag1", "Tag2", "Tag3"],
-  },
-];
+// Get featured projects from the shared data source
+const selectedProjects = getFeaturedProjects();
 ---
 
 <Layout title="Gabriel Palmar | Solutions Engineer" activeNav="home">
@@ -324,7 +304,6 @@ const selectedProjects = [
   .role-text::after {
     content: '|';
     animation: blink 1s infinite;
-    margin-left: 2px;
   }
 
   @keyframes blink {

@@ -10,7 +10,6 @@ import Layout from '../layouts/Layout.astro';
       <header class="page-header">
         <h1 class="page-title">About Me</h1>
         <p class="page-subtitle">
-          <!-- EDIT THIS: One-liner about yourself -->
           The short version: I help companies build reliable, scalable systems.
         </p>
       </header>
@@ -18,70 +17,109 @@ import Layout from '../layouts/Layout.astro';
       <!-- Your Story -->
       <section class="story-section">
         <h2 class="section-title">My Story</h2>
-        
-        <div class="story-content">
-          <!-- EDIT THIS: Your story in paragraphs -->
-          <p>
-            Start with where you came from. What got you interested in technology?
-            What was your journey like?
-          </p>
-          
-          <p>
-            Talk about key turning points. What experiences shaped your approach?
-            What challenges did you overcome?
-          </p>
-          
-          <p>
-            Describe where you are now. What do you do day-to-day?
-            What are you passionate about?
-          </p>
-          
-          <p>
-            Share where you're headed. What are you working towards?
-            What problems do you want to solve?
-          </p>
+
+        <div class="story-timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-label">The Beginning</span>
+              <p>As a technology enthusiast since childhood, I graduated as an Electrical Engineer, with a strong focus on logic and computing, which captured most of my interest.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+              </svg>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-label">Networking Foundations</span>
+              <p>Starting with networking, I took CCNA courses to deepen my knowledge in this area. Landing my first job at Cisco gave me a strong foundation in networking and troubleshooting.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"></path>
+              </svg>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-label">Cloud & Automation</span>
+              <p>Working with SD-WAN systems provided my first exposure to automation and cloud foundations, sparking a deeper interest in scalable and software-defined infrastructures.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-label">OpenVPN Inc.</span>
+              <p>Joining OpenVPN Inc. opened the door to many opportunities, from troubleshooting cloud environments to automating tasks and engaging with both existing and new customers.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                <polyline points="17 6 23 6 23 12"></polyline>
+              </svg>
+            </div>
+            <div class="timeline-content">
+              <span class="timeline-label">Continuous Growth</span>
+              <p>Continuous learning allows me to stay up to date with new technologies and pursue roles where skills are constantly evolving and expanding.</p>
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- How I Think -->
       <section class="thinking-section">
         <h2 class="section-title">How I Think</h2>
-        
+
         <div class="principles-grid">
-          <!-- EDIT THIS: Your principles/values -->
           <div class="principle-card">
             <div class="principle-number">01</div>
-            <h3>Principle Title</h3>
+            <h3>Most Problems Are Solvable</h3>
             <p>
-              Describe a core principle that guides how you work.
-              Give an example of how this shows up in practice.
+              While automation and troubleshooting are tools, I believe most technical problems can be resolved to a meaningful extent. The key is gathering the right information, paying close attention to details, and combining experience with collaboration when needed.
             </p>
           </div>
-          
+
           <div class="principle-card">
             <div class="principle-number">02</div>
-            <h3>Principle Title</h3>
+            <h3>Collaboration Is a Force Multiplier</h3>
             <p>
-              Describe a core principle that guides how you work.
-              Give an example of how this shows up in practice.
+              Clear communication is what turns a difficult problem into a solvable one. Whether through leadership, mentoring, or teamwork, collaboration helps align people faster, reduce mistakes, and move solutions forward.
             </p>
           </div>
-          
+
           <div class="principle-card">
             <div class="principle-number">03</div>
-            <h3>Principle Title</h3>
+            <h3>Automate to Reduce Risk, Not Just Effort</h3>
             <p>
-              Describe a core principle that guides how you work.
-              Give an example of how this shows up in practice.
+              Automation isn't only about speed. It's about building more reliable systems, improving performance and consistency, and reducing human error so the solution can scale with confidence.
             </p>
           </div>
-          
+
           <div class="principle-card">
             <div class="principle-number">04</div>
-            <h3>Principle Title</h3>
+            <h3>Continuous Learning Through Curiosity</h3>
             <p>
-              Describe a core principle that guides how you work.
-              Give an example of how this shows up in practice.
+              You can't know everything, but you can always question and learn. Curiosity has helped me grow into the position I'm in today, and I'm confident it will keep pushing me toward bigger challenges and better outcomes.
             </p>
           </div>
         </div>
@@ -90,38 +128,53 @@ import Layout from '../layouts/Layout.astro';
       <!-- Experience Summary -->
       <section class="experience-section">
         <h2 class="section-title">Experience</h2>
-        
+
         <div class="experience-list">
-          <!-- EDIT THIS: Your work history -->
           <div class="experience-item">
             <div class="exp-header">
               <div class="exp-info">
-                <h3>Job Title</h3>
-                <p class="exp-company">Company Name</p>
+                <h3>Technical Support Lead / Solutions Engineer</h3>
+                <p class="exp-company">OpenVPN Inc.</p>
               </div>
-              <span class="exp-date">2021 – Present</span>
+              <span class="exp-date">Oct 2021 – Present</span>
             </div>
-            <p class="exp-description">
-              Brief description of your role and key accomplishments.
-            </p>
+            <ul class="exp-highlights">
+              <li>Promoted to Support Team Lead, Americas (Oct 2024); lead 8 engineers across multi-product support, owning escalations and SLA-driven operations.</li>
+              <li>Handle ~120+ cases/month across Zendesk/Jira; own complex networking cases (routing, DNS, IPsec, SSO).</li>
+              <li>Lead pre-sales technical discovery and solution design for enterprise customers; support deal cycles with reference architectures, risk/tradeoff guidance, and implementation plans for secure VPN and hybrid connectivity.</li>
+              <li>Own complex PoCs and technical validations; build repeatable deployment/troubleshooting tooling (REST APIs, Bash, Python) to accelerate implementations and de-risk customer decisions.</li>
+              <li>Design and validate hybrid/multi-cloud connectivity across AWS/Azure/GCP; resolve routing/NAT edge cases to unblock deployments and improve rollout stability.</li>
+              <li>Translate business and security requirements into production-ready architectures, implementing and validating solutions using IaC, CI/CD pipelines, and cloud-native tooling across AWS, Azure, and GCP.</li>
+            </ul>
           </div>
-          
+
           <div class="experience-item">
             <div class="exp-header">
               <div class="exp-info">
-                <h3>Job Title</h3>
-                <p class="exp-company">Company Name</p>
+                <h3>Cisco TAC Engineer – SD-WAN & Unified Communications</h3>
+                <p class="exp-company">Cisco — via Sykes S.A.S</p>
               </div>
-              <span class="exp-date">2020 – 2021</span>
+              <span class="exp-date">Jun 2020 – Oct 2021</span>
             </div>
-            <p class="exp-description">
-              Brief description of your role and key accomplishments.
-            </p>
+            <ul class="exp-highlights">
+              <li>Supported 50+ North American enterprises on Cisco SD-WAN; reduced critical-incident MTTR 20% via OMP route monitoring and API-driven visibility.</li>
+              <li>Resolved Tier-2 UC issues (CUCM, Unity, Contact Center, gateways), improving call reliability and system uptime.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item education-item">
+            <div class="exp-header">
+              <div class="exp-info">
+                <h3>B.S., Electrical Engineering</h3>
+                <p class="exp-company">Rafael Urdaneta University</p>
+              </div>
+              <span class="exp-date">Jan 2015 – Jun 2019</span>
+            </div>
           </div>
         </div>
-        
+
         <div class="resume-cta">
-          <a href="/contact" class="btn btn-secondary">
+          <a href="/contact" class="btn btn-primary">
             Download Resume
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -135,31 +188,136 @@ import Layout from '../layouts/Layout.astro';
       <!-- Certifications -->
       <section class="certs-section">
         <h2 class="section-title">Certifications</h2>
-        
+
         <div class="certs-grid">
-          <!-- EDIT THIS: Your certifications -->
-          <div class="cert-item">
-            <span class="cert-icon">☁️</span>
-            <div class="cert-info">
-              <h4>Certification Name</h4>
-              <p>Issuing Organization • Valid until YYYY</p>
+          <a href="https://www.credly.com/badges/2a31694e-dabd-4282-b4c2-5227ed57610b" target="_blank" rel="noopener noreferrer" class="cert-item">
+            <div class="cert-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+              </svg>
             </div>
+            <div class="cert-info">
+              <h4>AWS Certified DevOps Engineer – Professional</h4>
+              <p>Amazon Web Services • Valid through Oct 2027</p>
+            </div>
+            <div class="cert-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+
+          <a href="https://www.credly.com/badges/7ba1a6a0-21a0-4207-abf7-b66485c54929" target="_blank" rel="noopener noreferrer" class="cert-item">
+            <div class="cert-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+              </svg>
+            </div>
+            <div class="cert-info">
+              <h4>AWS Certified Cloud Practitioner</h4>
+              <p>Amazon Web Services • Valid through Oct 2027</p>
+            </div>
+            <div class="cert-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+
+          <a href="https://www.credly.com/badges/957c9e8b-a186-48a6-b8fc-5c99e70c5cfd" target="_blank" rel="noopener noreferrer" class="cert-item">
+            <div class="cert-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+              </svg>
+            </div>
+            <div class="cert-info">
+              <h4>Cisco Certified Network Associate (CCNA)</h4>
+              <p>Cisco • Valid through Oct 2027</p>
+            </div>
+            <div class="cert-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="skills-section">
+        <h2 class="section-title">Skills</h2>
+
+        <div class="skills-category">
+          <h3 class="skills-category-title">Cloud & IaC</h3>
+          <div class="skills-list">
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">Google Cloud</span>
+            <span class="skill-tag">Microsoft Azure</span>
+            <span class="skill-tag">Kubernetes</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Terraform</span>
+            <span class="skill-tag">Helm</span>
+            <span class="skill-tag">Argo CD</span>
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">YAML/JSON</span>
           </div>
-          
-          <div class="cert-item">
-            <span class="cert-icon">☁️</span>
-            <div class="cert-info">
-              <h4>Certification Name</h4>
-              <p>Issuing Organization • Valid until YYYY</p>
-            </div>
+        </div>
+
+        <div class="skills-category">
+          <h3 class="skills-category-title">CI/CD & Automation</h3>
+          <div class="skills-list">
+            <span class="skill-tag">GitHub Actions</span>
+            <span class="skill-tag">Jenkins</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Bash</span>
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">Dependabot</span>
+            <span class="skill-tag">SonarQube</span>
           </div>
-          
-          <div class="cert-item">
-            <span class="cert-icon">🌐</span>
-            <div class="cert-info">
-              <h4>Certification Name</h4>
-              <p>Issuing Organization • Valid until YYYY</p>
-            </div>
+        </div>
+
+        <div class="skills-category">
+          <h3 class="skills-category-title">Observability & Reliability</h3>
+          <div class="skills-list">
+            <span class="skill-tag">CloudWatch</span>
+            <span class="skill-tag">Prometheus</span>
+            <span class="skill-tag">Grafana</span>
+            <span class="skill-tag">OpenTelemetry</span>
+          </div>
+        </div>
+
+        <div class="skills-category">
+          <h3 class="skills-category-title">Networking & Security</h3>
+          <div class="skills-list">
+            <span class="skill-tag">VPNs</span>
+            <span class="skill-tag">OpenVPN</span>
+            <span class="skill-tag">TCP/IP</span>
+            <span class="skill-tag">DNS</span>
+            <span class="skill-tag">SSL/TLS</span>
+            <span class="skill-tag">Firewalls</span>
+            <span class="skill-tag">Load Balancing</span>
+            <span class="skill-tag">NGINX Ingress</span>
+            <span class="skill-tag">OIDC/SAML</span>
+            <span class="skill-tag">RBAC</span>
+          </div>
+        </div>
+
+        <div class="skills-category">
+          <h3 class="skills-category-title">Web & Tooling</h3>
+          <div class="skills-list">
+            <span class="skill-tag">Astro</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">HTML/CSS</span>
+            <span class="skill-tag">Zendesk</span>
+            <span class="skill-tag">Jira</span>
+            <span class="skill-tag">CloudFormation</span>
           </div>
         </div>
       </section>
@@ -169,16 +327,8 @@ import Layout from '../layouts/Layout.astro';
         <h2 class="section-title">Outside of Work</h2>
         
         <div class="personal-content">
-          <!-- EDIT THIS: Personal interests -->
           <p>
-            Share a bit about who you are outside of work. 
-            What are your hobbies? What do you enjoy doing?
-            This helps humanize you and make connections.
-          </p>
-          
-          <p>
-            Optional: Mention location, travel interests, 
-            side projects, communities you're part of, etc.
+            I love traveling and discovering new cultures, especially through local food.<br> Also enjoy movies and video games, including competitive gaming, because why relax after work?
           </p>
         </div>
       </section>
@@ -247,15 +397,85 @@ import Layout from '../layouts/Layout.astro';
     margin-bottom: 5rem;
   }
 
-  /* Story */
-  .story-content {
-    font-size: 1.0625rem;
-    color: var(--color-text-muted);
-    line-height: 1.8;
+  /* Story Timeline */
+  .story-timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
   }
 
-  .story-content p {
+  .story-timeline::before {
+    content: '';
+    position: absolute;
+    left: 23px;
+    top: 24px;
+    bottom: 24px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--color-accent), var(--color-border));
+  }
+
+  .timeline-item {
+    display: flex;
+    gap: 1.5rem;
+    position: relative;
+  }
+
+  .timeline-marker {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg-card);
+    border: 2px solid var(--color-border);
+    border-radius: 12px;
+    color: var(--color-accent);
+    z-index: 1;
+    transition: all 0.3s ease;
+  }
+
+  .timeline-item:hover .timeline-marker {
+    border-color: var(--color-accent);
+    background: var(--color-accent-glow);
+    transform: scale(1.1);
+  }
+
+  .timeline-content {
+    flex: 1;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
     margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .timeline-item:hover .timeline-content {
+    border-color: var(--color-accent);
+    transform: translateX(8px);
+  }
+
+  .timeline-label {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+    padding: 0.25rem 0.625rem;
+    background: var(--color-accent-glow);
+    border-radius: 4px;
+  }
+
+  .timeline-content p {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin: 0;
   }
 
   /* Principles */
@@ -343,8 +563,47 @@ import Layout from '../layouts/Layout.astro';
     line-height: 1.6;
   }
 
+  .exp-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .exp-highlights li {
+    position: relative;
+    padding-left: 1.25rem;
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+  }
+
+  .exp-highlights li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 6px;
+    height: 6px;
+    background: var(--color-accent);
+    border-radius: 50%;
+  }
+
+  .exp-highlights li:last-child {
+    margin-bottom: 0;
+  }
+
+  .education-item {
+    border-left: 3px solid var(--color-accent);
+  }
+
+  .education-item .exp-header {
+    margin-bottom: 0;
+  }
+
   .resume-cta {
     text-align: center;
+    margin-top: 2rem;
   }
 
   /* Certifications */
@@ -362,10 +621,29 @@ import Layout from '../layouts/Layout.astro';
     border: 1px solid var(--color-border);
     border-radius: 10px;
     padding: 1.25rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .cert-item:hover {
+    border-color: var(--color-accent);
+    transform: translateX(8px);
   }
 
   .cert-icon {
-    font-size: 1.5rem;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-accent-glow);
+    border-radius: 10px;
+    color: var(--color-accent);
+  }
+
+  .cert-info {
+    flex: 1;
   }
 
   .cert-info h4 {
@@ -378,6 +656,63 @@ import Layout from '../layouts/Layout.astro';
   .cert-info p {
     font-size: 0.8125rem;
     color: var(--color-text-dim);
+  }
+
+  .cert-arrow {
+    color: var(--color-text-dim);
+    transition: all 0.3s ease;
+  }
+
+  .cert-item:hover .cert-arrow {
+    color: var(--color-accent);
+    transform: translate(4px, -4px);
+  }
+
+  /* Skills */
+  .skills-section {
+    margin-bottom: 5rem;
+  }
+
+  .skills-category {
+    margin-bottom: 2rem;
+  }
+
+  .skills-category:last-child {
+    margin-bottom: 0;
+  }
+
+  .skills-category-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+  }
+
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+  }
+
+  .skill-tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    color: var(--color-text);
+    transition: all 0.2s ease;
+  }
+
+  .skill-tag:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    transform: translateY(-2px);
   }
 
   /* Personal */
@@ -457,6 +792,29 @@ import Layout from '../layouts/Layout.astro';
     .exp-header {
       flex-direction: column;
       gap: 0.5rem;
+    }
+
+    .story-timeline::before {
+      left: 19px;
+    }
+
+    .timeline-marker {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+    }
+
+    .timeline-marker svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .timeline-content {
+      padding: 1.25rem;
+    }
+
+    .timeline-item:hover .timeline-content {
+      transform: translateX(4px);
     }
   }
 
